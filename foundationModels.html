@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+		<title>Projects</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/projects.css" />
+		<script src="./js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<header class="header-box">
+			<div class="logo-box">
+				<img src="./img/icon_headerLogo_l.png" title="西湖大学" onclick="openPage('https://www.westlake.edu.cn/', '_blank')" />
+				<span class="splitline"></span>
+				<img class="labLogo" src="./img/icon_headerLogo_r.png" />
+            </div>
+			<div class="r-box">
+				<nav class="menu-box">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a>Research<img src="./img/icon_arrowDown_active.png" /></a>
+							<ul class="childList">
+								<li><a href="research.html">Overview of Our Rescarch</a></li>
+								<li class="childActive"><a href="foundationModels.html">Multimodal Foundation Models</a></li>
+								<li><a href="algorithms.html">AIGC Theory and Algorithms</a></li>
+								<li><a href="AIGCModels.html">Image, Video and 3D Content AIGC Models</a></li>
+							</ul>
+						</li>
+						<li><a href="team.html">Team</a></li>
+						<li><a>Contributions<img src="./img/icon_arrowDown.png" /></a>
+							<ul class="childList" style="width: 2.01rem;transform: translateX(-17%);">
+								<li><a href="people.html">Publications</a></li>
+								<li><a href="awarded.html">Patents</a></li>
+							</ul>
+						</li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
+				</nav>
+				<div class="language-box">
+					<img src="./img/icon_language.png" />
+					<span>中文</span>
+				</div>
+			</div>
+		</header>
+		<section class="banner-box">
+			<img src="./images/projects/banner.png" />
+			<div class="banner-title">
+				<div class="txt">
+					<span>Projects</span>
+				</div>
+			</div>
+		</section>
+		<main class="main-box">
+            <div class="pageSignature-box">
+                <a href="index.html">Home</a>
+                <span class="arrow">>></span>
+                <a href="research.html">Research</a>
+                <span class="arrow">>></span>
+                <a>Multimodal Foundation Models</a>
+            </div>
+			<div class="itemBlock">
+				<div class="container-box">
+					<div class="item-box overview-box">
+                        <h5>Overview</h5>
+                        <p>We aim to develop a comprehensive multimodal foundation model capable of handling a wide range of tasks across diverse modalities, including text, image, and video understanding and generation. The model will be designed for easy adaptation to various downstream applications and scenarios.</p>
+                        <p>Our research will focus on advancing the architecture of the foundation model, optimizing multimodal training algorithms, improving inference accuracy and efficiency, and exploring real-world applications.</p>
+                    </div>
+                    <div class="item-box">
+                        <h5>Multimodal Foundation Model Architecture</h5>
+                        <p>We construct a powerful large multimodal model that seamlessly integrates text and image understanding and generation using a unified transformer architecture. The model handles text generation (autoregressive), where it predicts sequential tokens to create coherent text, and image generation (diffusion-like), where it progressively refines image patches from encoded inputs. This cross-modal capability highlights the model's versatility in understanding and generating complex, multimodal content, making it well-suited for applications like content creation, visual reasoning, and interactive AI systems.</p>
+                        <img src="./images/projects/img_1.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>Openstory++ : A Large-scale Dataset and Benchmark for Instance-aware Open-domain Visual Storytelling</h5>
+                        <p>Recent image generation models excel at creating high-quality images from brief captions. However, they fail to maintain consistency of multiple instances across images when encountering lengthy contexts. This inconsistency is largely due to in existing training datasets the absence of granular instance feature labeling in existing training datasets. To tackle these issues, we introduce Openstory++, a large scale dataset combining additional instance-level annotations with both images and text. This dataset can be utilized to train multi-modal generated models, allowing for the training of instance-focused story visualization models. Furthermore, we develop a tailored training methodology that emphasizes entity-centric image-text generation, ensuring that the models learn to effectively interweave visual and textual information. Specifically, Openstory++ streamlines the process of keyframe extraction from open-domain videos, employing vision-language models to generate captions that are then polished by a large language model for narrative continuity. It surpasses previous datasets by offering a more expansive open-domain resource, which incorporates automated captioning, high-resolution imagery tailored for instance count, and extensive frame sequences for temporal consistency. Additionally, we present Cohere-Bench, a pioneering benchmark framework for evaluating the image generation tasks when long multimodal context is provided, including the ability to keep the background, style, instances in the given context coherent. Compared to existing benchmarks, our work fills critical gaps in multi-modal generation, propelling the development of models that can adeptly generate and interpret complex narratives in open-domain environments. Experiments conducted within Cohere-Bench confirm the superiority of Openstory++ in nurturing high-quality visual storytelling models, enhancing their ability to address sophisticated and open-domain generation tasks.</p>
+                        <img src="./images/projects/img_2.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>When Images Speak Louder: Mitigating Language Bias-induced Hallucinations in VLMs through Cross-Modal Guidance</h5>
+                        <p>Vision-Language Models (VLMs) have shown solid ability for multimodal understanding of both visual and language contexts. However, existing VLMs often face severe challenges of hallucinations, meaning that LVMs tend to generate responses that are only fluent in the language but irrelevant to images in previous contexts. To address this issue, we analyze how language bias contributes to hallucinations and then introduce Cross-Modal Guidance(CMG), a training-free decoding method that addresses the hallucinations by leveraging the difference between the output distributions of the original model and the one with degraded visual-language attention. In practice, we adaptively mask the attention weight of the most influential image tokens in selected transformer layers to corrupt the visual-language perception as a concrete type of degradation. Such a degradation-induced decoding emphasizes the perception of visual contexts and therefore significantly reduces language bias without harming the ability of VLMs. In experiment sections, we conduct comprehensive studies across various VLMs. All results demonstrate the superior advantages of CMG with neither additional conditions nor training costs. We also quantitatively show CMG can improve VLM's performance on hallucination-specific benchmarks and generalize effectively with significant margins.</p>
+                        <img src="./images/projects/img_3.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-box">
+			<img src="./img/img_footerBg.png" />
+			<div class="container-box">
+				<div class="joinus-box">
+					<h6>JOIN US</h6>
+					<p>I am hiring Research Fellows, associate Fellows, assistant Fellows, postdoctoral fellows, algorithm engineers, technical artists, research assistants, and administrative assistants. Interested candidates can reach me directly.</p>
+					<a href="joinus.html">Contact Us</a>
+				</div>
+				
+				<div class="logo-box">
+					<img src="./img/icon_footerLogo_l.png" />
+					<span class="splitline"></span>
+					<img class="labLogo" src="./img/icon_footerLogo_r.png" />
+				</div>
+				<p class="address">Address: Yunchuang Gallium Valley 6-201, No. 428 Zhiqiang Road, Sandun Town, Xihu District, Hangzhou, Zhejiang Province</p>
+				<p class="email">Email: maple_hr@westlake.edu.cn</p>
+				
+				<p class="filings">
+					<span><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18025489号</a></span>
+					<span>浙公安备33010602007514号</span>
+					<span>Copyright © Westlake University. All Rights Reserved</span>
+				</p>
+			</div>
+		</footer>
+		<script>
+			function setRem(designSize) {
+				let html = document.documentElement;
+				let width = html.clientWidth;
+				if (designSize == 3.75) {
+					width = width >= 375 ? 375 : width;
+				}
+				if (designSize == 14.4) {
+					width = width >= 1440 ? 1440 : width;
+				}
+				html.style.fontSize = width / designSize + 'px'; // 设计稿宽度为1440px，那么1rem=100px，故除以14.4
+			}
+			
+			function openPage(url, target) {
+				if (url) {
+					window.open(url, target || '_self')
+				}
+			}
+			window.onresize = function() {
+				setRem(14.4);
+			};
+			$(function(){
+				setRem(14.4);
+			});
+		</script>
+	</body>
+</html>

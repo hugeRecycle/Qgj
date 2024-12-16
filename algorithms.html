@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+		<title>Projects</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/projects.css" />
+		<script src="./js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<header class="header-box">
+			<div class="logo-box">
+				<img src="./img/icon_headerLogo_l.png" title="西湖大学" onclick="openPage('https://www.westlake.edu.cn/', '_blank')" />
+				<span class="splitline"></span>
+				<img class="labLogo" src="./img/icon_headerLogo_r.png" />
+            </div>
+			<div class="r-box">
+				<nav class="menu-box">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a>Research<img src="./img/icon_arrowDown_active.png" /></a>
+							<ul class="childList">
+								<li><a href="research.html">Overview of Our Rescarch</a></li>
+								<li><a href="foundationModels.html">Multimodal Foundation Models</a></li>
+								<li class="childActive"><a href="algorithms.html">AIGC Theory and Algorithms</a></li>
+								<li><a href="AIGCModels.html">Image, Video and 3D Content AIGC Models</a></li>
+							</ul>
+						</li>
+						<li><a href="team.html">Team</a></li>
+						<li><a>Contributions<img src="./img/icon_arrowDown.png" /></a>
+							<ul class="childList" style="width: 2.01rem;transform: translateX(-17%);">
+								<li><a href="people.html">Publications</a></li>
+								<li><a href="awarded.html">Patents</a></li>
+							</ul>
+						</li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
+				</nav>
+				<div class="language-box">
+					<img src="./img/icon_language.png" />
+					<span>中文</span>
+				</div>
+			</div>
+		</header>
+		<section class="banner-box">
+			<img src="./images/projects/banner.png" />
+			<div class="banner-title">
+				<div class="txt">
+					<span>Projects</span>
+				</div>
+			</div>
+		</section>
+		<main class="main-box">
+            <div class="pageSignature-box">
+                <a href="index.html">Home</a>
+                <span class="arrow">>></span>
+                <a href="research.html">Research</a>
+                <span class="arrow">>></span>
+                <a>AIGC Theory and Algorithms</a>
+            </div>
+			<div class="itemBlock">
+				<div class="container-box">
+					<div class="item-box overview-box">
+                        <h5>Overview</h5>
+                        <p>We aim to advance the theoretical foundations and algorithmic innovations in the field of Artificial Intelligence Generated Content (AIGC). By delving deeply into the theoretical analysis of AIGC algorithms, we seek to uncover the principles underlying generative architectures, optimize training frameworks, accelerate inference, and enhance both controllability and interpretability.</p>
+                    </div>
+                    <div class="item-box">
+                        <h5>One-Step Diffusion Distillation through Score Implicit Matching</h5>
+                        <p>This repository contains inference-only code for our work, SIM, a cutting-edge approach for distilling pre-trained diffusion models into efficient one-step generators. Unlike traditional models that require multiple sampling steps, SIM achieves high-quality sample generation without needing training samples for distillation. It effectively computes gradients for various score-based divergences, resulting in impressive performance metrics: an FID of 2.06 for unconditional generation and 1.96 for class-conditional generation on the CIFAR10 dataset. Additionally, SIM has been applied to a state-of-the-art transformer-based diffusion model for text-to-image generation, achieving an aesthetic score of 6.42 and outperforming existing one-step generators.</p>
+                        <img src="./images/projects/img_4.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>Self-Guidance: Boosting Flow and Diffusion Generation on Their Own</h5>
+                        <p>Proper guidance strategies are essential to get optimal generation results without re-training diffusion and flow-based text-to-image models. However, existing guidances either require specific training or strong inductive biases of neural network architectures, potentially limiting their applications. To address these issues, in this paper, we introduce Self-Guidance (SG), a strong diffusion guidance that neither needs specific training nor requires certain forms of neural network architectures. Different from previous approaches, the Self-Guidance calculates the guidance vectors by measuring the difference between the velocities of two successive diffusion timesteps. Therefore, SG can be readily applied for both conditional and unconditional models with flexible network architectures. We conduct intensive experiments on both text-to-image generation and text-to-video generations across flexible architectures including UNet-based models and diffusion transformer-based models. On current state-of-the-art diffusion models such as Stable Diffusion 3.5 and FLUX, SG significantly boosts the image generation performance in terms of FID, and Human Preference Scores. Moreover, we find that SG has a surprisingly positive effect on the generation of high-quality human bodies such as hands, faces, and arms, showing strong potential to overcome traditional challenges on human body generations with minimal effort.</p>
+                        <img src="./images/projects/img_5.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>Schedule On the Fly: Diffusion Time Prediction forFaster and Better Image Generation</h5>
+                        <p>Diffusion and flow models have achieved remarkable successes in various applications such as text-to-image generation. However, these models typically rely on the same predetermined denoising schedules during inference for each prompt, which potentially limits the inference efficiency as well as the flexibility when handling different prompts. In this paper, we argue that the optimal noise schedule should adapt to each inference instance, and introduce the Time Prediction Diffusion Model (TPDM) to accomplish this. TPDM employs a plug-and-play Time Prediction Module (TPM) that predicts the next noise level based on current latent features at each denoising step. We train the TPM using reinforcement learning to maximize the final image quality while discounting the number of denoising steps. With such an adaptive scheduler, TPDM not only generates high-quality images that are aligned closely with human preferences but also adjusts the number of denoising steps and time on the fly, enhancing both performance and efficiency. We train TPDMs on multiple diffusion model benchmarks. With Stable Diffusion 3 Medium architecture, TPDM achieves an aesthetic score of 5.44 and a human preference score (HPS) of 29.59, while using 50% fewer denoising steps to achieve better performance.</p>
+                        <img src="./images/projects/img_6.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-box">
+			<img src="./img/img_footerBg.png" />
+			<div class="container-box">
+				<div class="joinus-box">
+					<h6>JOIN US</h6>
+					<p>I am hiring Research Fellows, associate Fellows, assistant Fellows, postdoctoral fellows, algorithm engineers, technical artists, research assistants, and administrative assistants. Interested candidates can reach me directly.</p>
+					<a href="joinus.html">Contact Us</a>
+				</div>
+				
+				<div class="logo-box">
+					<img src="./img/icon_footerLogo_l.png" />
+					<span class="splitline"></span>
+					<img class="labLogo" src="./img/icon_footerLogo_r.png" />
+				</div>
+				<p class="address">Address: Yunchuang Gallium Valley 6-201, No. 428 Zhiqiang Road, Sandun Town, Xihu District, Hangzhou, Zhejiang Province</p>
+				<p class="email">Email: maple_hr@westlake.edu.cn</p>
+				
+				<p class="filings">
+					<span><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18025489号</a></span>
+					<span>浙公安备33010602007514号</span>
+					<span>Copyright © Westlake University. All Rights Reserved</span>
+				</p>
+			</div>
+		</footer>
+		<script>
+			function setRem(designSize) {
+				let html = document.documentElement;
+				let width = html.clientWidth;
+				if (designSize == 3.75) {
+					width = width >= 375 ? 375 : width;
+				}
+				if (designSize == 14.4) {
+					width = width >= 1440 ? 1440 : width;
+				}
+				html.style.fontSize = width / designSize + 'px'; // 设计稿宽度为1440px，那么1rem=100px，故除以14.4
+			}
+			
+			function openPage(url, target) {
+				if (url) {
+					window.open(url, target || '_self')
+				}
+			}
+			window.onresize = function() {
+				setRem(14.4);
+			};
+			$(function(){
+				setRem(14.4);
+			});
+		</script>
+	</body>
+</html>

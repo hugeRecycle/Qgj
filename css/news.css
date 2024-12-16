@@ -1,0 +1,62 @@
+.itemBlock .container-box {
+	padding: .4rem 1.2rem 0;
+    max-width: 14.4rem;
+	margin: 0 auto;
+}
+.itemBlock h5 {
+	font-size: .36rem;
+	color: rgba(0,0,0,.85);
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	line-height: .49rem;
+	text-align: center;
+}
+.itemBlock .article-txt ul {
+    margin-top: .1rem;
+}
+.itemBlock .article-txt li {
+	padding: .5rem 0 .6rem;
+    border-bottom: .01rem dashed rgba(0,0,0,.15);
+}
+.itemBlock .article-txt li:last-child {
+    border-color: transparent;
+}
+.itemBlock .article-txt li h6 {
+	display: flex;
+	height: .3rem;
+	font-size: .24rem;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	color: rgba(0,0,0,.85);
+    margin-bottom: .04rem;
+}
+.itemBlock .article-txt li .date {
+	color: #2157A8;
+    font-size: .22rem;
+}
+.itemBlock .article-txt li .splitline {
+	width: .02rem;
+	height: .21rem;
+	background-color: #2157A8;
+	margin: 0 .2rem;
+}
+.itemBlock .article-txt li p {
+	color: rgba(0,0,0,.65);
+	font-size: .22rem;
+	line-height: .3rem;
+	margin-top: .04rem;
+    font-family: Avenir-Roman;
+}
+.itemBlock .article-txt li p span {
+    color: rgba(0,0,0,.85);
+}
+.itemBlock .article-txt li p span:last-child {
+    text-decoration: underline;
+    color: #2157A8;
+    cursor: pointer;
+}
+.itemBlock .article-txt li img {
+    margin-top: .32rem;
+    width: 6.4rem;
+    display: block;
+}

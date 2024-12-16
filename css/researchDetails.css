@@ -1,0 +1,65 @@
+.pageSignature-box {
+    line-height: .19rem;
+    padding: .2rem 1.2rem 0;
+    max-width: 14.4rem;
+	margin: 0 auto;
+    display: flex;
+}
+.pageSignature-box a,
+.pageSignature-box span {
+    text-decoration: none;
+    font-size: .14rem;
+    color: #999;
+}
+.pageSignature-box a {
+    cursor: pointer;
+}
+.pageSignature-box a:last-child {
+    color: #F18D00;
+}
+.pageSignature-box .arrow {
+    width: .16rem;
+    margin: 0 .1rem;
+}
+.itemBlock .container-box {
+	padding: .1rem 1.2rem .3rem;
+	max-width: 14.4rem;
+	margin: 0 auto;
+}
+.item-box {
+    padding: .5rem 0;
+}
+.item-box h5 {
+    font-size: .3rem;
+	color: #153D97;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	line-height: .41rem;
+    text-align: center;
+    margin-bottom: .5rem;
+    display: block;
+}
+.item-box strong {
+    color: rgba(0,0,0,.85);
+    font-family: Avenir-Heavy;
+	font-weight: 800;
+    line-height: .36rem;
+    font-size: .26rem;
+    text-align: center;
+    margin: .5rem 0 .12rem;
+    display: block;
+}
+.item-box p {
+	margin-top: .32rem;
+	font-size: .16rem;
+	color: rgba(0,0,0,.85);
+	font-family: Avenir-Roman;
+	line-height: .24rem;
+    display: block;
+}
+.item-box img {
+    max-width: 100%;
+    height: auto;
+    margin: .16rem auto;
+    display: block;
+}

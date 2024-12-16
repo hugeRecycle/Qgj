@@ -1,0 +1,101 @@
+.itemBlock .container-box {
+	padding: .8rem 1.2rem;
+    max-width: 14.4rem;
+	margin: 0 auto;
+    display: flex;
+}
+.left-box {
+    min-width: 2.1rem;
+    border-right: .015rem solid rgba(0,0,0,0.15);
+}
+#parentmenu a {
+    text-decoration: none;
+    display: block;
+}
+#parentmenu>div {
+    margin-bottom: .17rem;
+}
+#parentmenu>div:last-child {
+    margin-bottom: 0;
+}
+#parentmenu>div>a {
+    line-height: .27rem;
+    font-size: .2rem;
+    font-family: Avenir-Heavy;
+    font-weight: 800;
+    color: rgba(0,0,0,.85);
+    cursor: pointer;
+}
+#parentmenu>div.active a,
+#parentmenu>div:hover a,
+#parentmenu>div .childmenu a.active,
+#parentmenu>div .childmenu a:hover {
+    color: #0C3375;
+}
+
+#parentmenu>div .childmenu {
+	margin-top: .09rem;
+    padding-left: .12rem;
+}
+#parentmenu>div .childmenu a {
+    line-height: .22rem;
+    padding: .07rem 0;
+	font-size: .16rem;
+    color: rgba(0,0,0,0.45);
+    font-family: Avenir-Medium;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+#parentmenu>div .childmenu a::after {
+    position:absolute;
+	right: -0.02rem;
+	top: .03rem;
+	width: .03rem;
+	height: .3rem;
+    border-radius: .02rem;
+	content:"";
+	background:#0C3375;
+    display: none;
+}
+#parentmenu>div .childmenu a.active::after,
+#parentmenu>div .childmenu a:hover::after {
+    display: block;
+}
+
+.list-box {
+    flex: 1;
+    margin-left: .4rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.list-box p {
+    line-height: .27rem;
+    margin-bottom: .24rem;
+	color: rgba(0,0,0,0.45);
+	font-size: .2rem;
+	font-family: Avenir-Roman;
+    counter-increment: number;
+}
+.list-box p:first-child {
+    margin-bottom: 0;
+}
+.list-box p::before {
+    font-family: Avenir-Medium;
+    font-weight: 500;
+    content: counter(number)".";
+    font-size: .2rem;
+    color: rgba(0, 0, 0, .65);
+    margin-right: .04rem;
+}
+.list-box p>span {
+    color: rgba(0,0,0,0.85);
+    font-family: Avenir-Medium;
+    font-weight: 500;
+}
+.list-box p>a {
+    color: #0C3375;
+    text-decoration: underline;
+    cursor: pointer;
+}

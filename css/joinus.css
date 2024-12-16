@@ -1,0 +1,139 @@
+.itemBlock {
+	position: relative;
+}
+.itemBlock .container-box {
+	padding: .6rem 1.2rem;
+    max-width: 14.4rem;
+	margin: 0 auto;
+}
+.itemBlock img {
+	height: 100%;
+	display: block;
+}
+.itemBlock h5 {
+	font-size: .36rem;
+	color: rgba(0,0,0,.85);
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	line-height: .49rem;
+	text-align: center;
+}
+.itemBlock .article-txt p {
+	font-size: .22rem;
+	font-family: Avenir-Medium;
+	font-weight: 500;
+	color: rgba(0,0,0,.85);
+	line-height: .3rem;
+}
+
+.itemBlock1 .article-img {
+	float: right;
+	position: relative;
+}
+.itemBlock1 .article-img::after {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 0;
+	width:100%;
+	height: 1.12rem;
+	content:"";
+	background:linear-gradient(rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%)
+}
+.itemBlock1 .article-img img {
+	width: 5rem;
+}
+.itemBlock1 .article-img span {
+	position: absolute;
+	left: .3rem;
+	bottom: .14rem;
+	z-index: 1;
+	font-size: .22rem;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	color: #FFFFFF;
+}
+.itemBlock1 .article-txt {
+	width: calc(100% - 5.4rem);
+	margin-right: .4rem;
+}
+.itemBlock1 .article-txt img {
+	width: .39rem;
+}
+.itemBlock1 .article-txt h6 {
+	margin-top: .24rem;
+	line-height: .3rem;
+	color: rgba(0,0,0,.85);
+	font-size: .22rem;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+}
+.itemBlock1 .article-txt p {
+	margin-top: .16rem;
+	line-height: .28rem;
+	color: rgba(0,0,0,.65);
+	font-size: .2rem;
+	font-family: Avenir-Roman;
+}
+.itemBlock1 .article-txt a {
+	margin-top: .22rem;
+	text-decoration: none;
+	color: #2157A8;
+	font-size: .18rem;
+	font-family: Avenir-Heavy;
+	font-weight: 800;
+	cursor: pointer;
+	display: block;
+}
+.itemBlock1 .article-txt a>img {
+	margin-left: .12rem;
+	width: .16rem;
+	height: .16rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.itemBlock2 .container-box {
+	padding-right: .7rem;
+}
+.itemBlock2 .bgImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+.itemBlock2 .bgImg img {
+	width: 100%;
+}
+.itemBlock2 .article-txt p {
+	margin-top: .32rem;
+}
+.itemBlock2 .article-txt p>a {
+	margin-top: .08rem;
+	color: #2157A8;
+	text-decoration: underline;
+	font-family: Avenir-Roman;
+	cursor: pointer;
+}
+.itemBlock3 .article-txt p {
+	margin-top: .16rem;
+}
+.itemBlock3 .article-txt p:first-child {
+	margin-top: .32rem;
+}
+.itemBlock3 .article-txt p>img {
+	width: .3rem;
+	height: .3rem;
+	margin-right: .12rem;
+	display: inline-block;
+	vertical-align: sub;
+}
+.itemBlock3 .article-img {
+	margin-top: .4rem;
+}
+.itemBlock3 .article-img img {
+	width: 8.38rem;
+	margin: 0 auto;
+}

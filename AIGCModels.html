@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+		<title>Projects</title>
+		<link rel="shortcut icon" href="./favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/projects.css" />
+		<script src="./js/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<header class="header-box">
+			<div class="logo-box">
+				<img src="./img/icon_headerLogo_l.png" title="西湖大学" onclick="openPage('https://www.westlake.edu.cn/', '_blank')" />
+				<span class="splitline"></span>
+				<img class="labLogo" src="./img/icon_headerLogo_r.png" />
+            </div>
+			<div class="r-box">
+				<nav class="menu-box">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a>Research<img src="./img/icon_arrowDown_active.png" /></a>
+							<ul class="childList">
+								<li><a href="research.html">Overview of Our Rescarch</a></li>
+								<li><a href="foundationModels.html">Multimodal Foundation Models</a></li>
+								<li><a href="algorithms.html">AIGC Theory and Algorithms</a></li>
+								<li class="childActive"><a href="AIGCModels.html">Image, Video and 3D Content AIGC Models</a></li>
+							</ul>
+						</li>
+						<li><a href="team.html">Team</a></li>
+						<li><a>Contributions<img src="./img/icon_arrowDown.png" /></a>
+							<ul class="childList" style="width: 2.01rem;transform: translateX(-17%);">
+								<li><a href="people.html">Publications</a></li>
+								<li><a href="awarded.html">Patents</a></li>
+							</ul>
+						</li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="joinus.html">Join us</a></li>
+					</ul>
+				</nav>
+				<div class="language-box">
+					<img src="./img/icon_language.png" />
+					<span>中文</span>
+				</div>
+			</div>
+		</header>
+		<section class="banner-box">
+			<img src="./images/projects/banner.png" />
+			<div class="banner-title">
+				<div class="txt">
+					<span>Projects</span>
+				</div>
+			</div>
+		</section>
+		<main class="main-box">
+            <div class="pageSignature-box">
+                <a href="index.html">Home</a>
+                <span class="arrow">>></span>
+                <a href="research.html">Research</a>
+                <span class="arrow">>></span>
+                <a>Image, Video and 3D Content AIGC Models</a>
+            </div>
+			<div class="itemBlock">
+				<div class="container-box">
+					<div class="item-box overview-box">
+                        <h5>Overview</h5>
+                        <p>Our research focuses on advancing Image, Video, and 3D Content Generation through cutting-edge AI-Generated Content (AIGC) models, with a primary emphasis on diffusion models. These models have demonstrated remarkable potential in generating high-quality, realistic visual and 3D content. By leveraging the power of diffusion processes, we aim to create systems capable of synthesizing intricate, contextually coherent content across multiple modalities.</p>
+                        <p>Our ultimate goal is to contribute to the development of a world model—a comprehensive, generative understanding of the environment and its dynamics. This involves not only producing visually stunning and realistic content but also ensuring that the generated outputs align with complex real-world structures and behaviors. Through our research, we seek to push the boundaries of content creation technologies, enabling new applications in entertainment, virtual reality, and digital interaction. By bridging generative capabilities with the broader vision of a world model, we aim to unlock unprecedented possibilities for creativity and innovation.</p>
+                    </div>
+                    <div class="item-box">
+                        <h5>Equilibrated Diffusion: Frequency-aware Textual Embedding for Equilibrated Image Customization</h5>
+                        <p>Image customization involves learning the subject from provided concept images and generating it within textual contexts, typically yielding alterations of attributes such as style or background.</p>
+                        <img src="./images/projects/img_7.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>Video Generation for World Modeling</h5>
+                        <p>This repository contains inference-only code for our work, SIM, a cutting-edge approach for distilling pre-trained diffusion models into efficient one-step generators. Unlike traditional models that require multiple sampling steps, SIM achieves high-quality sample generation without needing training samples for distillation. It effectively computes gradients for various score-based divergences, resulting in impressive performance metrics: an FID of 2.06 for unconditional generation and 1.96 for class-conditional generation on the CIFAR10 dataset. Additionally, SIM has been applied to a state-of-the-art transformer-based diffusion model for text-to-image generation, achieving an aesthetic score of 6.42 and outperforming existing one-step generators.</p>
+                        <img src="./images/projects/img_8.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <h5>OmniMotionGPT: Animal Motion Generation with Limited Data</h5>
+                        <p>Our paper aims to generate diverse and realistic animal motion sequences from textual descriptions, without a large-scale animal text-motion dataset. While the task of text-driven human motion synthesis is already extensively studied and benchmarked, it remains challenging to transfer this success to other skeleton structures with limited data. In this work, we design a model architecture that imitates Generative Pretraining Transformer (GPT), utilizing prior knowledge learned from human data to the animal domain. We jointly train motion autoencoders for both animal and human motions and at the same time optimize through the similarity scores among human motion encoding, animal motion encoding, and text CLIP embedding. Presenting the first solution to this problem, we are able to generate animal motions with high diversity and fidelity, quantitatively and qualitatively outperforming the results of training human motion generation baselines on animal data. Additionally, we introduce AnimalML3D, the first text-animal motion dataset with 1240 animation sequences spanning 36 different animal identities. We hope this dataset would mediate the data scarcity problem in text-driven animal motion generation, providing a new playground for the research community.</p>
+                        <img src="./images/projects/img_9.png" />
+                        <div class="btn-box">
+                            <a href="./researchDetails.html"><img src="./images/projects/btn-learnMore.png" /></a>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer-box">
+			<img src="./img/img_footerBg.png" />
+			<div class="container-box">
+				<div class="joinus-box">
+					<h6>JOIN US</h6>
+					<p>I am hiring Research Fellows, associate Fellows, assistant Fellows, postdoctoral fellows, algorithm engineers, technical artists, research assistants, and administrative assistants. Interested candidates can reach me directly.</p>
+					<a href="joinus.html">Contact Us</a>
+				</div>
+				
+				<div class="logo-box">
+					<img src="./img/icon_footerLogo_l.png" />
+					<span class="splitline"></span>
+					<img class="labLogo" src="./img/icon_footerLogo_r.png" />
+				</div>
+				<p class="address">Address: Yunchuang Gallium Valley 6-201, No. 428 Zhiqiang Road, Sandun Town, Xihu District, Hangzhou, Zhejiang Province</p>
+				<p class="email">Email: maple_hr@westlake.edu.cn</p>
+				
+				<p class="filings">
+					<span><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18025489号</a></span>
+					<span>浙公安备33010602007514号</span>
+					<span>Copyright © Westlake University. All Rights Reserved</span>
+				</p>
+			</div>
+		</footer>
+		<script>
+			function setRem(designSize) {
+				let html = document.documentElement;
+				let width = html.clientWidth;
+				if (designSize == 3.75) {
+					width = width >= 375 ? 375 : width;
+				}
+				if (designSize == 14.4) {
+					width = width >= 1440 ? 1440 : width;
+				}
+				html.style.fontSize = width / designSize + 'px'; // 设计稿宽度为1440px，那么1rem=100px，故除以14.4
+			}
+			
+			function openPage(url, target) {
+				if (url) {
+					window.open(url, target || '_self')
+				}
+			}
+			window.onresize = function() {
+				setRem(14.4);
+			};
+			$(function(){
+				setRem(14.4);
+			});
+		</script>
+	</body>
+</html>
